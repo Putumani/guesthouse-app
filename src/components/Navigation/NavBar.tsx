@@ -1,9 +1,15 @@
-// components/Navbar.tsx
+"use client";
+
 import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
+
+import ThemeContext from "@/context/themeContext";
+import { useContext } from "react";
 
 const Navbar: React.FC = () => {
+  const { darkTheme, setDarkTheme } = useContext(ThemeContext);
+
   return (
     <nav className="py-10 px-4 container mx-auto text-xl flex flex-wrap items-center justify-between">
       <div className="flex items-center">
@@ -26,12 +32,32 @@ const Navbar: React.FC = () => {
       </ul>
 
       <div className="w-8"></div>
-      
+
       <div className="flex items-center space-x-4">
-        <Link href="/auth">
-          <FaUserCircle className="cursor-pointer" />
-        </Link>
-        <MdDarkMode className="cursor-pointer" />
+        <li className="flex items-center">
+          <Link href="/auth">
+            <FaUserCircle className="cursor-pointer" />
+          </Link>
+        </li>
+        <li className="ml-2" style={{ listStyle: "none" }}>
+          {darkTheme ? (
+            <MdOutlineLightMode
+              className="cursor-pointer"
+              onClick={() => {
+                setDarkTheme(false);
+                localStorage.removeItem("guesthouse-theme");
+              }}
+            />
+          ) : (
+            <MdDarkMode
+              className="cursor-pointer"
+              onClick={() => {
+                setDarkTheme(true);
+                localStorage.setItem("guesthouse-theme", "true");
+              }}
+            />
+          )}
+        </li>
       </div>
     </nav>
   );

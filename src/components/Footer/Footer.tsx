@@ -17,7 +17,7 @@ const Footer = () => {
                         <p>123 Road</p>
                         <div className="flex items-center py-4">
                             <BsFillSendFill/>
-                            <p className="ml-2">codewithPhura</p>
+                            <p className="ml-2">Lifa Ngonyama</p>
                         </div>
                         <div className="flex items-center">
                             <BsTelephoneOutbound/>
@@ -25,7 +25,7 @@ const Footer = () => {
                         </div>
                         <div className="flex items-center py-4">
                             <BiMessageDetail/>
-                            <p className="ml-2">codewithPhura</p>
+                            <p className="ml-2">Lifa Ngonyama</p>
                         </div>            
                     </div>
 
