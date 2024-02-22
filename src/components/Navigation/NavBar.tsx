@@ -8,13 +8,11 @@ import ThemeContext from "@/context/themeContext";
 import { useContext } from "react";
 
 const Navbar: React.FC = () => {
-  const { darkTheme, setDarkTheme } = useContext(ThemeContext);
-
   return (
     <nav className="py-10 px-4 container mx-auto text-xl flex flex-wrap items-center justify-between">
       <div className="flex items-center">
         <Link href="/" className="font-black text-[#F27405]">
-          LifaGuestHouse
+          OTJ Pride GuestHouse
         </Link>
       </div>
 
@@ -38,25 +36,6 @@ const Navbar: React.FC = () => {
           <Link href="/auth">
             <FaUserCircle className="cursor-pointer" />
           </Link>
-        </li>
-        <li className="ml-2" style={{ listStyle: "none" }}>
-          {darkTheme ? (
-            <MdOutlineLightMode
-              className="cursor-pointer"
-              onClick={() => {
-                setDarkTheme(false);
-                localStorage.removeItem("guesthouse-theme");
-              }}
-            />
-          ) : (
-            <MdDarkMode
-              className="cursor-pointer"
-              onClick={() => {
-                setDarkTheme(true);
-                localStorage.setItem("guesthouse-theme", "true");
-              }}
-            />
-          )}
         </li>
       </div>
     </nav>
