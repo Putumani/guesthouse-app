@@ -12,9 +12,7 @@ const HeroSection = () => {
         position: 'relative',
       }}
     >
-      <div className="text-center bg-gray-800 bg-opacity-75 p-8 rounded-md">
-        <h1 className="text-4xl font-bold text-white mb-4">Discover Your Perfect Getaway</h1>
-        <p className="text-lg text-white mb-8">Unwind, relax, and create lasting memories in the most beautiful destinations around the world.</p>
+      <div className="text-center  p-8 rounded-md">
         <button className="bg-orange-500 text-white px-6 py-3 rounded-full text-lg hover:bg-orange-600 transition duration-300">
           Book Now
         </button>

@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <Link href="/">Rooms</Link>
         </li>
         <li className="hover:-translate-y-2 duration-500 transition-all">
-          <Link href="/">Contacts</Link>
+          <Link href="/">Contact</Link>
         </li>
       </ul>
 
